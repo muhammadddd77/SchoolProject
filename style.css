@@ -2203,7 +2203,7 @@ button {
    RESPONSIVE (PHONE 550PX)
    ========================================================================== */
 
-@media (max-width: 550px) {
+@media (max-width: 530px) {
     .container {
         width: calc(100% - 28px);
     }
