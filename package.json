@@ -1,0 +1,22 @@
+{
+  "name": "asadullo-gulomov-gymnasium",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Official portal for Gymnasium named after Asadullo Gulomov (Dushanbe, Tajikistan)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.2"
+  }
+}

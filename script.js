@@ -5,31 +5,44 @@
   const translations = {
     ru: {
       doc_title: "Гимназия имени Асадулло Гуломова — Официальный сайт",
+      badge_admission: "ПРИЁМ ДОКУМЕНТОВ 2026/2027 ОТКРЫТ",
+      badge_official: "ОФИЦИАЛЬНЫЙ САЙТ ГИМНАЗИИ №9",
       logo1: "Гимназия имени",
       logo2: "Асадулло Гуломова",
       nav1: "О гимназии",
       nav2: "Руководство",
       nav3: "Ценности",
-      nav4: "Жизнь гимназии",
+      nav4: "Жизнь",
       nav_insta: "Instagram",
       nav5: "Достижения",
       nav6: "Галерея",
       nav7: "Контакты",
       nav_insta_btn: "Наш Instagram",
-      hero_label: "ОФИЦИАЛЬНЫЙ САЙТ ГИМНАЗИИ",
+      hero_label: "ГОСУДАРСТВЕННАЯ ГИМНАЗИЯ • ДУШАНБЕ",
       hero_h1: "Место,<br><span>где знания</span><br>становятся будущим.",
-      hero_p: "Гимназия имени Асадулло Гуломова — место, где качественное образование, воспитание личности, инновации и стремление к успеху объединяются в едином пути.",
+      hero_p: "Гимназия имени Асадулло Гуломова — пространство академического лидерства, нравственного воспитания и современных инноваций в самом сердце Душанбе.",
       hero_more: "Узнать больше",
       hero_life: "Жизнь гимназии",
       hero_insta: "Мы в Instagram",
       hero_city: "ДУШАНБЕ",
       hero_edu: "ОБРАЗОВАНИЕ",
-      hero_dev: "РАЗВИТИЕ",
+      hero_dev: "ИННОВАЦИИ",
       photo_label: "НАША ГИМНАЗИЯ",
       photo_text: "Знания. Личность. Будущее.",
       goal_label: "НАША МИССИЯ",
       goal_text: "Воспитывать сильную личность, готовую к будущему.",
       scroll: "ЛИСТАЙТЕ ВНИЗ",
+      stories_title: "АКТУАЛЬНЫЕ СОБЫТИЯ",
+      stories_subtitle: "Смотрите живые моменты гимназии",
+      stories_open_insta: "Открыть в Instagram",
+      bento_rank: "№1 в районе",
+      bento_rank_desc: "Одна из ведущих гимназий столицы",
+      bento_graduates: "100%",
+      bento_graduates_desc: "Поступление выпускников в лучшие вузы",
+      bento_langs: "3 языка",
+      bento_langs_desc: "Таджикский, русский и углубленный английский",
+      bento_olympiad: "250+",
+      bento_olympiad_desc: "Призёров городских и республиканских олимпиад",
       about_tag: "01 / О ГИМНАЗИИ",
       about_h2: "Больше, чем<br><em>просто школа.</em>",
       about_intro: "Гимназия объединяет глубокие академические традиции, современные методики обучения, раскрытие талантов и насыщенную школьную жизнь.",
@@ -100,36 +113,57 @@
       footer1: "Гимназия имени",
       footer2: "Асадулло Гуломова",
       footer_copy: "© 2026 · Официальный сайт гимназии имени Асадулло Гуломова. Все права защищены.",
-      floating_insta: "Мы в Instagram"
+      floating_insta: "Мы в Instagram",
+      bottom_home: "Главная",
+      bottom_about: "О нас",
+      bottom_gallery: "Галерея",
+      bottom_contacts: "Контакты",
+      theme_label: "Оформление",
+      theme_dark: "Тёмная тема",
+      theme_light: "Светлая тема",
+      theme_btn: "Сменить тему"
     },
 
     tj: {
       doc_title: "Гимназияи ба номи Асадулло Ғуломов — Сомонаи расмӣ",
+      badge_admission: "ҚАБУЛИ ҲУҶҶАТҲО БАРОИ СОЛИ 2026/2027 КУШОДА АСТ",
+      badge_official: "СОМОНАИ РАСМИИ ГИМНАЗИЯИ №9",
       logo1: "Гимназияи ба номи",
       logo2: "Асадулло Ғуломов",
-      nav1: "Дар бораи гимназия",
+      nav1: "Дар бораи мо",
       nav2: "Роҳбарият",
       nav3: "Арзишҳо",
-      nav4: "Ҳаёти гимназия",
+      nav4: "Ҳаёт",
       nav_insta: "Instagram",
       nav5: "Дастовардҳо",
       nav6: "Галерея",
       nav7: "Тамос",
       nav_insta_btn: "Instagram-и мо",
-      hero_label: "СОМОНАИ РАСМИИ ГИМНАЗИЯ",
+      hero_label: "ГИМНАЗИЯИ ДАВЛАТӢ • ДУШАНБЕ",
       hero_h1: "Ҷое,<br><span>ки дониш</span><br>ба оянда табдил меёбад.",
-      hero_p: "Гимназияи ба номи Асадулло Ғуломов — маконест, ки таълими босифат, тарбияи шахсият, навоварӣ ва талош барои муваффақиятро дар як роҳ муттаҳид мекунад.",
+      hero_p: "Гимназияи ба номи Асадулло Ғуломов — маркази пешсафии таълимӣ, тарбияи баланди маънавӣ ва навовариҳои муосир дар қалби пойтахт.",
       hero_more: "Маълумоти бештар",
       hero_life: "Ҳаёти гимназия",
       hero_insta: "Мо дар Instagram",
       hero_city: "ДУШАНБЕ",
       hero_edu: "МАОРИФ",
-      hero_dev: "РУШД",
+      hero_dev: "НАВОВАРӢ",
       photo_label: "ГИМНАЗИЯИ МО",
       photo_text: "Дониш. Шахсият. Оянда.",
       goal_label: "ҲАДАФИ МО",
       goal_text: "Тарбияи шахсияти соҳибмаърифат ва омода ба даъватҳои оянда.",
       scroll: "БА ПОЁН ГУЗАРЕД",
+      stories_title: "МУҲИМТАРИН РӮЙДОДҲО",
+      stories_subtitle: "Лаҳзаҳои зинда ва хотирмони гимназия",
+      stories_open_insta: "Кушодан дар Instagram",
+      bento_rank: "Пешсаф дар ноҳия",
+      bento_rank_desc: "Яке аз беҳтарин гимназияҳои шаҳри Душанбе",
+      bento_graduates: "100%",
+      bento_graduates_desc: "Дохилшавии хатмкунандагон ба донишгоҳҳои олӣ",
+      bento_langs: "3 забон",
+      bento_langs_desc: "Тоҷикӣ, русӣ ва омӯзиши амиқи забони англисӣ",
+      bento_olympiad: "250+",
+      bento_olympiad_desc: "Ғолибони олимпиадаҳои шаҳрӣ ва ҷумҳуриявӣ",
       about_tag: "01 / ДАР БОРАИ ГИМНАЗИЯ",
       about_h2: "Беш аз<br><em>танҳо мактаб.</em>",
       about_intro: "Гимназия анъанаҳои устувори таълимӣ, усулҳои муосири дарсдиҳӣ, кашфи истеъдодҳо ва ҳаёти рангини мактабиро муттаҳид менамояд.",
@@ -200,23 +234,33 @@
       footer1: "Гимназияи ба номи",
       footer2: "Асадулло Ғуломов",
       footer_copy: "© 2026 · Сомонаи расмии гимназияи ба номи Асадулло Ғуломов. Ҳамаи ҳуқуқҳо маҳфузанд.",
-      floating_insta: "Мо дар Instagram"
+      floating_insta: "Мо дар Instagram",
+      bottom_home: "Асосӣ",
+      bottom_about: "Оид ба мо",
+      bottom_gallery: "Галерея",
+      bottom_contacts: "Тамос",
+      theme_label: "Мавзӯъ",
+      theme_dark: "Мавзӯи торик",
+      theme_light: "Мавзӯи равшан",
+      theme_btn: "Ивази мавзӯъ"
     },
 
     en: {
-      doc_title: "Asadullo Gulomov Gymnasium — Official Website",
+      doc_title: "Asadullo Gulomov Gymnasium — Official Portal",
+      badge_admission: "ADMISSIONS OPEN FOR ACADEMIC YEAR 2026/2027",
+      badge_official: "OFFICIAL GYMNASIUM PORTAL №9",
       logo1: "Gymnasium named after",
       logo2: "Asadullo Gulomov",
       nav1: "About Us",
       nav2: "Leadership",
       nav3: "Values",
-      nav4: "School Life",
+      nav4: "Campus Life",
       nav_insta: "Instagram",
       nav5: "Achievements",
       nav6: "Gallery",
       nav7: "Contacts",
       nav_insta_btn: "Our Instagram",
-      hero_label: "OFFICIAL GYMNASIUM WEBSITE",
+      hero_label: "PRESTIGIOUS PUBLIC GYMNASIUM • DUSHANBE",
       hero_h1: "The place<br><span>where knowledge</span><br>shapes the future.",
       hero_p: "Asadullo Gulomov Gymnasium is an institution where rigorous academics, personal integrity, modern innovation, and aspiration for excellence come together.",
       hero_more: "Learn More",
@@ -230,6 +274,17 @@
       goal_label: "OUR MISSION",
       goal_text: "Fostering well-rounded leaders prepared for tomorrow's challenges.",
       scroll: "SCROLL DOWN",
+      stories_title: "CURRENT HIGHLIGHTS",
+      stories_subtitle: "Experience authentic campus moments",
+      stories_open_insta: "Open in Instagram",
+      bento_rank: "#1 in District",
+      bento_rank_desc: "Among top elite schools in capital",
+      bento_graduates: "100%",
+      bento_graduates_desc: "Admission to leading world universities",
+      bento_langs: "3 Languages",
+      bento_langs_desc: "Tajik, Russian, and advanced English",
+      bento_olympiad: "250+",
+      bento_olympiad_desc: "Winners of national and city olympiads",
       about_tag: "01 / ABOUT OUR GYMNASIUM",
       about_h2: "More than<br><em>just a school.</em>",
       about_intro: "The Gymnasium unites solid academic traditions, modern educational methodologies, talent cultivation, and a vibrant community.",
@@ -300,7 +355,109 @@
       footer1: "Gymnasium named after",
       footer2: "Asadullo Gulomov",
       footer_copy: "© 2026 · Official website of Asadullo Gulomov Gymnasium. All rights reserved.",
-      floating_insta: "Follow on Instagram"
+      floating_insta: "Follow on Instagram",
+      bottom_home: "Home",
+      bottom_about: "About",
+      bottom_gallery: "Gallery",
+      bottom_contacts: "Contact",
+      theme_label: "Appearance",
+      theme_dark: "Dark Theme",
+      theme_light: "Light Theme",
+      theme_btn: "Switch Theme"
+    }
+  };
+
+  // --- STORIES DATA ---
+  const storiesDatabase = {
+    1: {
+      media: "images/insta_school_1.jpg",
+      time: "7 Октября 2026",
+      instaUrl: "https://www.instagram.com/p/DeL5_DJzo-W/",
+      title: {
+        ru: "День государственного языка в гимназии",
+        tj: "Рӯзи забони давлатӣ дар Гимназия",
+        en: "State Language Day celebration"
+      },
+      desc: {
+        ru: "В Гимназии имени Асадулло Гуломова отметили День государственного языка с глубоким уважением к национальному языку и культуре.",
+        tj: "Дар Гимназияи ба номи Асадулло Ғуломов Рӯзи забони давлатии Ҷумҳурии Тоҷикистон бо арҷгузорӣ ба забони тоҷикӣ таҷлил гардид.",
+        en: "Celebration of the State Language Day with cultural and literary honors at Asadullo Gulomov Gymnasium."
+      }
+    },
+    2: {
+      media: "images/insta_school_3.jpg",
+      time: "6 Октября 2026",
+      instaUrl: "https://www.instagram.com/p/DeKAjqkTMpl/",
+      title: {
+        ru: "Торжественное чествование учителей",
+        tj: "Баргузории чорабинӣ бахшида ба Рӯзи омӯзгор",
+        en: "Honoring our devoted teachers"
+      },
+      desc: {
+        ru: "Торжественное праздничное мероприятие, посвящённое благородному призванию педагога и труду наших наставников.",
+        tj: "Чорабинии тантанавии идона бахшида ба касби пуршарафи омӯзгор ва қадршиносии устодони азиз дар шаҳри Душанбе.",
+        en: "Festive ceremony dedicated to the honored profession of teachers and academic mentors."
+      }
+    },
+    3: {
+      media: "images/insta_school_4.jpg",
+      time: "4 Октября 2026",
+      instaUrl: "https://www.instagram.com/p/DeGZ3IyTyc6/",
+      title: {
+        ru: "Поздравление от учеников 11 «А» класса",
+        tj: "Табрикоти хонандаи синфи 11 «А» Қурбонова Мадина",
+        en: "Greetings from Senior Class 11-A"
+      },
+      desc: {
+        ru: "Искренние слова благодарности любимым учителям за заботу, знания и веру в будущее каждого выпускника.",
+        tj: "Табрикоти самимии хонандаи синфи 11 «А» Қурбонова Мадина ба муносибати Рӯзи омӯзгорон.",
+        en: "Heartfelt gratitude to our beloved mentors for dedication, patience, and inspiring knowledge."
+      }
+    },
+    4: {
+      media: "images/insta_school_5.jpg",
+      time: "4 Октября 2026",
+      instaUrl: "https://www.instagram.com/p/DeGXDteTBUE/",
+      title: {
+        ru: "Преданность гимназии и наставникам — 11 «Г»",
+        tj: "Табрикоти синфи 11 «Г» ба омӯзгорон",
+        en: "Class 11-G tribute to educators"
+      },
+      desc: {
+        ru: "Ученики 11 «Г» класса подготовили тёплые видеопоздравления для преподавателей гимназии.",
+        tj: "Хонандагони синфи 11 «Г» омӯзгорони худро бо муҳаббат ва эҳтироми хоса табрик намуданд.",
+        en: "Warmest wishes and commemorative tribute prepared by 11-G class students."
+      }
+    },
+    5: {
+      media: "images/insta_school_6.jpg",
+      time: "4 Октября 2026",
+      instaUrl: "https://www.instagram.com/p/DeF7p3tzmVX/",
+      title: {
+        ru: "Национальные праздники и молодёжь",
+        tj: "Иди миллӣ ва саҳми насли наврас",
+        en: "National forum participation"
+      },
+      desc: {
+        ru: "Гимназисты активно участвуют в общенациональных праздниках и образовательных инициативах.",
+        tj: "Хонандагони гимназия дар таҷлили ҷашнҳои умумидавлатӣ ва чорабиниҳои тарбиявӣ фаъолона ширкат меварзанд.",
+        en: "Active student participation in republican cultural assemblies and educational events."
+      }
+    },
+    6: {
+      media: "images/ass11.jpeg",
+      time: "2026",
+      instaUrl: "https://www.instagram.com/gym.asadullo.gulomov/",
+      title: {
+        ru: "Научные достижения и олимпиады",
+        tj: "Дастовардҳо ва ғолибони олимпиадаҳо",
+        en: "Academic Olympiad victories"
+      },
+      desc: {
+        ru: "Победы гимназистов на городских и республиканских олимпиадах — гордость нашей школы.",
+        tj: "Ғолибиятҳои пайвастаи хонандагони Гимназия дар олимпиадаҳои сатҳи гуногун.",
+        en: "Consistent top achievements of our students in city and national educational olympiads."
+      }
     }
   };
 
@@ -311,13 +468,15 @@
 
   window.addEventListener("scroll", () => {
     if (header) {
-      header.classList.toggle("scrolled", window.scrollY > 40);
+      header.classList.toggle("scrolled", window.scrollY > 30);
     }
-  });
+    updateBottomNav();
+  }, { passive: true });
 
   if (menuBtn && navMenu) {
     menuBtn.addEventListener("click", () => {
       navMenu.classList.toggle("open");
+      menuBtn.classList.toggle("active");
       document.body.classList.toggle("menu-open");
     });
   }
@@ -325,6 +484,7 @@
   document.querySelectorAll(".nav-menu a").forEach(a => {
     a.addEventListener("click", () => {
       navMenu?.classList.remove("open");
+      menuBtn?.classList.remove("active");
       document.body.classList.remove("menu-open");
     });
   });
@@ -341,6 +501,26 @@
       }
     });
   });
+
+  // --- MOBILE BOTTOM DOCK SCROLL SPY ---
+  function updateBottomNav() {
+    const sections = [
+      { id: 'home', btn: document.getElementById('dockHome') },
+      { id: 'about', btn: document.getElementById('dockAbout') },
+      { id: 'gallery', btn: document.getElementById('dockGallery') },
+      { id: 'contacts', btn: document.getElementById('dockContacts') }
+    ];
+
+    const scrollPos = window.scrollY + 250;
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const sec = document.getElementById(sections[i].id);
+      if (sec && scrollPos >= sec.offsetTop) {
+        document.querySelectorAll('.dock-item').forEach(b => b.classList.remove('active'));
+        if (sections[i].btn) sections[i].btn.classList.add('active');
+        break;
+      }
+    }
+  }
 
   // --- REVEAL ANIMATIONS (INTERSECTION OBSERVER) ---
   if ("IntersectionObserver" in window) {
@@ -384,22 +564,23 @@
 
         observer.unobserve(el);
       });
-    }, { threshold: 0.6 });
+    }, { threshold: 0.5 });
 
     document.querySelectorAll("[data-target]").forEach(el => counterObserver.observe(el));
   }
 
   // --- 3-LANGUAGE SWITCHER (RU / TJ / EN) ---
+  let currentLang = "ru";
   const i18nElements = [...document.querySelectorAll("[data-i18n]")];
 
   function setLanguage(lang) {
     if (!["ru", "tj", "en"].includes(lang)) {
       lang = "ru";
     }
+    currentLang = lang;
 
     const dict = translations[lang] || translations.ru;
 
-    // Update all i18n elements
     i18nElements.forEach(el => {
       const key = el.dataset.i18n;
       if (dict && dict[key] !== undefined) {
@@ -411,38 +592,35 @@
       }
     });
 
-    // Update HTML attributes
+    // Update Story circle tag names
+    document.querySelectorAll(".story-tag-name").forEach(tag => {
+      const attr = `data-tag-${lang}`;
+      if (tag.hasAttribute(attr)) {
+        tag.textContent = tag.getAttribute(attr);
+      }
+    });
+
     document.documentElement.lang = lang === "tj" ? "tg" : lang;
     document.title = dict.doc_title || "Гимназия имени Асадулло Гуломова";
 
-    // Update lang button states
     document.querySelectorAll(".lang-btn").forEach(btn => {
       const isActive = btn.dataset.lang === lang;
       btn.classList.toggle("active", isActive);
       btn.setAttribute("aria-pressed", String(isActive));
     });
 
-    // Save user choice
     try {
       localStorage.setItem("gymnasium-language", lang);
-    } catch (e) {
-      // storage unavailable
-    }
+    } catch (e) { }
+
+    updateThemeUI(document.documentElement.getAttribute("data-theme") || "dark");
   }
 
-  // Bind language button clicks
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       setLanguage(btn.dataset.lang);
     });
   });
-
-  // Load saved or default language
-  let savedLang = "ru";
-  try {
-    savedLang = localStorage.getItem("gymnasium-language") || "ru";
-  } catch (e) { }
-  setLanguage(savedLang);
 
   // --- GALLERY FILTER TABS ---
   const filterBtns = document.querySelectorAll(".filter-btn");
@@ -466,6 +644,66 @@
     });
   });
 
+  // --- INSTAGRAM FULLSCREEN STORY VIEWER ---
+  const storyModal = document.getElementById("storyModal");
+  const storyBackdrop = document.getElementById("storyBackdrop");
+  const storyCloseBtn = document.getElementById("storyCloseBtn");
+  const storyProgress = document.getElementById("storyProgress");
+  const storyImage = document.getElementById("storyImage");
+  const storyTitle = document.getElementById("storyTitle");
+  const storyDesc = document.getElementById("storyDesc");
+  const storyTime = document.getElementById("storyTime");
+  const storyInstaLink = document.getElementById("storyInstaLink");
+  let storyInterval = null;
+
+  function openStory(id) {
+    const data = storiesDatabase[id];
+    if (!data || !storyModal) return;
+
+    storyImage.src = data.media;
+    storyTime.textContent = data.time;
+    storyTitle.textContent = data.title[currentLang] || data.title.ru;
+    storyDesc.textContent = data.desc[currentLang] || data.desc.ru;
+    storyInstaLink.href = data.instaUrl;
+
+    storyProgress.style.width = "0%";
+    storyModal.classList.add("open");
+    storyModal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+
+    if (storyInterval) clearInterval(storyInterval);
+    const start = Date.now();
+    const duration = 7000; // 7 seconds per story
+
+    storyInterval = setInterval(() => {
+      const elapsed = Date.now() - start;
+      const pct = Math.min(100, (elapsed / duration) * 100);
+      storyProgress.style.width = pct + "%";
+      if (elapsed >= duration) {
+        closeStory();
+      }
+    }, 40);
+  }
+
+  function closeStory() {
+    if (!storyModal) return;
+    if (storyInterval) clearInterval(storyInterval);
+    storyModal.classList.remove("open");
+    storyModal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    if (storyImage) storyImage.src = "";
+  }
+
+  document.querySelectorAll(".story-circle-item").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-story-id");
+      openStory(id);
+    });
+  });
+
+  if (storyCloseBtn) storyCloseBtn.addEventListener("click", closeStory);
+  if (storyBackdrop) storyBackdrop.addEventListener("click", closeStory);
+
   // --- LIGHTBOX MODAL ---
   const lightboxModal = document.getElementById("lightboxModal");
   const lightboxImg = document.getElementById("lightboxImg");
@@ -474,20 +712,14 @@
   const lightboxClose = document.getElementById("lightboxClose");
   const lightboxBackdrop = document.getElementById("lightboxBackdrop");
 
-  window.openLightbox = function(src, caption, instaUrl) {
+  window.openLightbox = function (src, caption, instaUrl) {
     if (!lightboxModal || !lightboxImg) return;
     lightboxImg.src = src;
     if (lightboxCaption) {
       lightboxCaption.textContent = caption || "";
     }
     if (lightboxInstaBtn) {
-      if (instaUrl) {
-        lightboxInstaBtn.href = instaUrl;
-        lightboxInstaBtn.style.display = "inline-flex";
-      } else {
-        lightboxInstaBtn.href = "https://www.instagram.com/gym.asadullo.gulomov/";
-        lightboxInstaBtn.style.display = "inline-flex";
-      }
+      lightboxInstaBtn.href = instaUrl || "https://www.instagram.com/gym.asadullo.gulomov/";
     }
     lightboxModal.classList.add("open");
     lightboxModal.setAttribute("aria-hidden", "false");
@@ -506,10 +738,84 @@
   if (lightboxBackdrop) lightboxBackdrop.addEventListener("click", closeLightbox);
 
   window.addEventListener("keydown", e => {
-    if (e.key === "Escape" && lightboxModal && lightboxModal.classList.contains("open")) {
-      closeLightbox();
+    if (e.key === "Escape") {
+      if (storyModal && storyModal.classList.contains("open")) closeStory();
+      if (lightboxModal && lightboxModal.classList.contains("open")) closeLightbox();
     }
   });
+
+  // --- THEME MANAGEMENT (DARK / LIGHT) ---
+  const THEME_STORAGE_KEY = "gymnasium-theme";
+
+  function getPreferredTheme() {
+    try {
+      const saved = localStorage.getItem(THEME_STORAGE_KEY);
+      if (saved === "dark" || saved === "light") return saved;
+    } catch (e) {}
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+      return "light";
+    }
+    return "dark";
+  }
+
+  function updateThemeUI(theme) {
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    if (metaTheme) {
+      metaTheme.setAttribute("content", theme === "light" ? "#f8fafc" : "#06172f");
+    }
+
+    const dict = translations[currentLang] || translations.ru;
+    const statusTexts = document.querySelectorAll(".theme-status-text");
+    statusTexts.forEach(el => {
+      el.textContent = theme === "dark" ? (dict.theme_dark || "Тёмная тема") : (dict.theme_light || "Светлая тема");
+    });
+
+    const themeToggleBtns = document.querySelectorAll(".theme-toggle-btn, .mobile-theme-toggle-pill");
+    themeToggleBtns.forEach(btn => {
+      btn.setAttribute("data-theme-active", theme);
+      const title = theme === "dark" ? (dict.theme_light || "Светлая тема") : (dict.theme_dark || "Тёмная тема");
+      btn.setAttribute("title", title);
+      btn.setAttribute("aria-label", title);
+    });
+  }
+
+  function applyTheme(theme, save = true) {
+    if (theme !== "light" && theme !== "dark") theme = "dark";
+    document.documentElement.setAttribute("data-theme", theme);
+    if (save) {
+      try {
+        localStorage.setItem(THEME_STORAGE_KEY, theme);
+      } catch (e) {}
+    }
+    updateThemeUI(theme);
+  }
+
+  function toggleTheme() {
+    const current = document.documentElement.getAttribute("data-theme") || "dark";
+    const next = current === "dark" ? "light" : "dark";
+    applyTheme(next, true);
+  }
+
+  const themeToggleBtn = document.getElementById("themeToggleBtn");
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener("click", toggleTheme);
+  }
+
+  const mobileThemeToggleBtn = document.getElementById("mobileThemeToggleBtn");
+  if (mobileThemeToggleBtn) {
+    mobileThemeToggleBtn.addEventListener("click", toggleTheme);
+  }
+
+  // Initialize theme
+  const initialTheme = getPreferredTheme();
+  applyTheme(initialTheme, false);
+
+  // Load saved or default language
+  let savedLang = "ru";
+  try {
+    savedLang = localStorage.getItem("gymnasium-language") || "ru";
+  } catch (e) { }
+  setLanguage(savedLang);
 
   window.addEventListener("load", () => {
     document.body.classList.add("loaded");

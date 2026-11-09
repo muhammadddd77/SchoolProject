@@ -1,0 +1,3724 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --navy: #06172f;
+  --navy2: #0b2343;
+  --navy3: #030a16;
+  --gold: #d6ad58;
+  --gold2: #f3d993;
+  --gold-glow: rgba(214, 173, 88, 0.35);
+  --cream: #f8fafc;
+  --white: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --line: rgba(15, 23, 42, 0.08);
+  --line-light: rgba(255, 255, 255, 0.12);
+  --insta-grad: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  --insta-hover-shadow: 0 12px 30px rgba(220, 39, 67, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: "Plus Jakarta Sans", "DM Sans", -apple-system, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all .25s ease;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.container {
+  width: min(1200px, calc(100% - 44px));
+  margin: auto;
+}
+
+.section {
+  padding: 120px 0;
+  position: relative;
+}
+
+.section-dark {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0;
+  background: var(--navy);
+  color: white;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  color: white;
+  transition: all .4s cubic-bezier(.16, 1, .3, 1);
+  background: rgba(6, 23, 47, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header.scrolled {
+  background: rgba(6, 23, 47, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+  border-bottom-color: rgba(214, 173, 88, 0.2);
+}
+
+.nav {
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.logo-circle {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1.5px solid rgba(241, 212, 141, 0.85);
+  border-radius: 50%;
+  color: var(--gold2);
+  background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(214, 173, 88, 0.2);
+  transition: transform .3s ease;
+}
+
+.logo:hover .logo-circle {
+  transform: scale(1.05);
+}
+
+.logo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-title b {
+  display: block;
+  font: 700 13px "Manrope", sans-serif;
+  color: #ffffff;
+  letter-spacing: .2px;
+}
+
+.logo-title small {
+  display: block;
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 8.5px;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-menu a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: .3px;
+  transition: color .25s ease;
+  position: relative;
+  padding: 6px 0;
+}
+
+.nav-menu a:hover {
+  color: var(--gold2);
+}
+
+.nav-mobile-actions {
+  display: none;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Header Instagram Pill */
+.nav-insta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 15px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  font: 700 10.5px "Manrope", sans-serif;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  transition: all .3s cubic-bezier(.16, 1, .3, 1);
+}
+
+.nav-insta-pill i {
+  font-size: 13px;
+  color: #f1a368;
+  transition: transform .3s ease;
+}
+
+.nav-insta-pill:hover {
+  background: var(--insta-grad);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(220, 39, 67, 0.4);
+  transform: translateY(-2px);
+}
+
+.nav-insta-pill:hover i {
+  color: #ffffff;
+  transform: rotate(8deg) scale(1.15);
+}
+
+/* 3-Language Switcher */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+}
+
+.lang-btn {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.55);
+  padding: 4px 8px;
+  border-radius: 100px;
+  font: 700 9.5px "Manrope", sans-serif;
+  letter-spacing: .8px;
+  transition: all .25s ease;
+}
+
+.lang-btn:hover {
+  color: #ffffff;
+}
+
+.lang-btn.active {
+  background: linear-gradient(135deg, rgba(214, 173, 88, 0.35), rgba(241, 212, 141, 0.15));
+  color: var(--gold2);
+  border: 1px solid rgba(241, 212, 141, 0.5);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.lang-divider {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 10px;
+  user-select: none;
+}
+
+.menu-btn {
+  display: none;
+  padding: 8px;
+  border: 0;
+  background: transparent;
+}
+
+.menu-btn span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin: 5px 0;
+  background: white;
+  border-radius: 2px;
+  transition: .3s cubic-bezier(.16, 1, .3, 1);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  color: white;
+  background:
+    radial-gradient(circle at 78% 42%, rgba(25, 73, 125, 0.65), transparent 35%),
+    radial-gradient(circle at 15% 80%, rgba(214, 173, 88, 0.12), transparent 30%),
+    linear-gradient(135deg, #020914, #06172f 45%, #0b2343 85%, #020914);
+}
+
+.hero-lines {
+  position: absolute;
+  inset: 0;
+  opacity: .12;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: linear-gradient(to bottom, #000, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, #000, transparent);
+}
+
+.orb {
+  position: absolute;
+  border: 1px solid rgba(214, 173, 88, 0.16);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.orb-1 {
+  width: 700px;
+  height: 700px;
+  right: -280px;
+  top: 4%;
+  animation: orbFloat 24s ease-in-out infinite alternate;
+}
+
+.orb-2 {
+  width: 420px;
+  height: 420px;
+  right: 80px;
+  top: 24%;
+  border-color: rgba(255, 255, 255, 0.08);
+  animation: orbFloat 18s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes orbFloat {
+  from { transform: translateY(0) rotate(0deg); }
+  to { transform: translateY(-30px) rotate(15deg); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 135px 0 85px;
+  display: grid;
+  grid-template-columns: 1.05fr .78fr;
+  gap: 75px;
+  align-items: center;
+}
+
+.hero-admission-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  background: rgba(16, 185, 129, 0.14);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #34d399;
+  font: 700 9.5px "Manrope", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.live-dot-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 12px #10b981;
+  display: inline-block;
+  animation: livePulse 2s infinite;
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .4; transform: scale(1.25); }
+}
+
+.mini-label,
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold2);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.mini-label i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold2);
+  box-shadow: 0 0 12px var(--gold);
+}
+
+.hero h1 {
+  max-width: 720px;
+  margin: 20px 0;
+  font: 800 clamp(42px, 5.5vw, 80px)/1.04 "Manrope", sans-serif;
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: 1.2px rgba(255, 255, 255, 0.65);
+}
+
+.hero-desc {
+  max-width: 530px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.button {
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .4px;
+  transition: all .35s cubic-bezier(.16, 1, .3, 1);
+  white-space: nowrap;
+}
+
+.primary {
+  color: var(--navy);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+}
+
+.primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(255, 255, 255, 0.25);
+  background: var(--gold2);
+}
+
+.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-3px);
+}
+
+.button.instagram {
+  background: linear-gradient(135deg, rgba(225, 48, 108, 0.2), rgba(131, 58, 180, 0.2));
+  border: 1px solid rgba(225, 48, 108, 0.45);
+  color: #ffffff;
+}
+
+.button.instagram i.fa-instagram {
+  font-size: 16px;
+  color: #f1a368;
+}
+
+.button.instagram:hover {
+  background: var(--insta-grad);
+  border-color: transparent;
+  transform: translateY(-4px);
+  box-shadow: var(--insta-hover-shadow);
+}
+
+.hero-bottom {
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 9px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.hero-bottom i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.hero-image-wrap {
+  position: relative;
+  min-width: 0;
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 580px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 260px 260px 28px 28px;
+  background: #091a31;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.45);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(.16, 1, .3, 1);
+}
+
+.hero-image-wrap:hover .hero-image img {
+  transform: scale(1.04);
+}
+
+.image-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 45%, rgba(1, 8, 18, 0.92));
+}
+
+.hero-photo-caption {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+}
+
+.hero-photo-caption span {
+  color: var(--gold2);
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  display: block;
+  font-weight: 700;
+}
+
+.hero-photo-caption strong {
+  font: 600 20px "Manrope", sans-serif;
+  color: #ffffff;
+  display: block;
+}
+
+.hero-card {
+  position: absolute;
+  left: -35px;
+  bottom: 45px;
+  max-width: 290px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  background: rgba(6, 23, 47, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.4);
+}
+
+.star {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(214, 173, 88, 0.15);
+  border: 1px solid rgba(214, 173, 88, 0.35);
+  color: var(--gold2);
+  font-size: 18px;
+}
+
+.hero-card small {
+  display: block;
+  color: var(--gold2);
+  font-size: 8px;
+  letter-spacing: 1.8px;
+  font-weight: 700;
+}
+
+.hero-card strong {
+  display: block;
+  margin-top: 4px;
+  font: 600 12px "DM Sans", sans-serif;
+  line-height: 1.45;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font: 700 8.5px "Manrope", sans-serif;
+  letter-spacing: 2.5px;
+  color: rgba(255, 255, 255, 0.45);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.scroll-down span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold2);
+  animation: scrollBounce 2s infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: .4; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+
+/* ==========================================================================
+   STORIES BAR (INSTAGRAM HIGHLIGHTS)
+   ========================================================================== */
+.stories-bar-section {
+  padding: 30px 0 35px;
+  background: linear-gradient(180deg, #020914 0%, #06172f 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 5;
+}
+
+.stories-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0 4px;
+}
+
+.stories-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.stories-title-wrap h4 {
+  font: 800 12px "Manrope", sans-serif;
+  letter-spacing: 1.8px;
+  color: var(--gold2);
+  text-transform: uppercase;
+}
+
+.stories-subtitle {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.stories-scroll-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 8px 4px 14px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.stories-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.story-circle-item {
+  background: transparent;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform .3s cubic-bezier(.16, 1, .3, 1);
+}
+
+.story-circle-item:hover {
+  transform: translateY(-4px);
+}
+
+.story-ring-wrap {
+  position: relative;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.story-ring-gradient {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--insta-grad);
+  animation: rotateRing 8s linear infinite;
+  box-shadow: 0 4px 18px rgba(220, 39, 67, 0.35);
+}
+
+.story-avatar-inner {
+  position: relative;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2.5px solid #06172f;
+  background: #020914;
+  z-index: 2;
+}
+
+.story-avatar-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+.story-circle-item:hover .story-avatar-inner img {
+  transform: scale(1.1);
+}
+
+.story-tag-name {
+  font: 700 11px "Manrope", sans-serif;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: .3px;
+  max-width: 82px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+/* ==========================================================================
+   BENTO STATS SECTION
+   ========================================================================== */
+.bento-stats-section {
+  padding: 50px 0 90px;
+  background: var(--cream);
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.bento-card {
+  position: relative;
+  background: white;
+  border-radius: 22px;
+  padding: 30px 24px;
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(6, 23, 47, 0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 170px;
+  transition: all .35s cubic-bezier(.16, 1, .3, 1);
+}
+
+.bento-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(6, 23, 47, 0.08);
+  border-color: rgba(214, 173, 88, 0.4);
+}
+
+.bento-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(214, 173, 88, 0.14);
+  color: var(--gold);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.bento-icon.emerald {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+}
+
+.bento-icon.blue {
+  background: rgba(59, 130, 246, 0.12);
+  color: #3b82f6;
+}
+
+.bento-icon.purple {
+  background: rgba(168, 85, 247, 0.12);
+  color: #a855f7;
+}
+
+.bento-content h3 {
+  font: 800 24px "Manrope", sans-serif;
+  color: var(--navy);
+  letter-spacing: -.5px;
+  margin-bottom: 6px;
+}
+
+.bento-content p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   ABOUT, DIRECTOR, VALUES
+   ========================================================================== */
+.section-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.section-intro h2 {
+  font: 800 clamp(36px, 4.5vw, 64px)/1.05 "Manrope", sans-serif;
+  letter-spacing: -2px;
+  margin-top: 14px;
+}
+
+.section-intro h2 em {
+  font-style: italic;
+  color: var(--gold);
+  font-family: serif;
+}
+
+.section-intro > p {
+  max-width: 420px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.section-dark .section-intro > p {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  gap: 40px;
+  border-top: 1px solid var(--line);
+  padding-top: 60px;
+}
+
+.about-number {
+  font: 800 36px "Manrope", sans-serif;
+  color: rgba(8, 25, 45, 0.15);
+}
+
+.about-main {
+  position: relative;
+  padding-right: 40px;
+  border-right: 1px solid var(--line);
+}
+
+.vertical-word {
+  font: 800 10px "Manrope", sans-serif;
+  letter-spacing: 3px;
+  color: var(--gold);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.about-main h3 {
+  font: 700 clamp(24px, 2.5vw, 36px)/1.2 "Manrope", sans-serif;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.about-main p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--navy);
+  font: 700 12px "Manrope", sans-serif;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.text-link .arrow-box {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--navy);
+  color: white;
+  font-size: 11px;
+  transition: transform .25s ease;
+}
+
+.text-link:hover .arrow-box {
+  transform: translateX(4px);
+}
+
+.about-side {
+  padding-left: 20px;
+}
+
+.side-line {
+  width: 50px;
+  height: 2px;
+  background: var(--gold);
+  margin-bottom: 24px;
+}
+
+.about-side p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.about-photo {
+  margin-top: 60px;
+  height: 480px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(6, 23, 47, 0.12);
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+
+.about-photo:hover img {
+  transform: scale(1.03);
+}
+
+/* DIRECTOR */
+.director-decoration {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  border: 1px solid rgba(214, 173, 88, 0.1);
+  top: -150px;
+  right: -150px;
+  pointer-events: none;
+}
+
+.director-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.director-photo {
+  position: relative;
+  height: 560px;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.director-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.photo-number {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font: 800 24px "Manrope", sans-serif;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.photo-bottom {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(6, 23, 47, 0.85);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.photo-bottom span {
+  color: var(--gold2);
+  font: 700 9px "Manrope", sans-serif;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.photo-bottom strong {
+  font: 600 16px "Manrope", sans-serif;
+  line-height: 1.4;
+  display: block;
+}
+
+.gold-line {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 20px 0 28px;
+}
+
+.director-text h2 {
+  font: 800 clamp(36px, 4vw, 56px)/1.08 "Manrope", sans-serif;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.director-text h2 em {
+  font-style: italic;
+  color: var(--gold2);
+  font-family: serif;
+}
+
+.director-text > p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  line-height: 1.85;
+  margin-bottom: 36px;
+}
+
+.director-sign {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 24px;
+}
+
+.director-sign span {
+  color: var(--gold2);
+  font: 700 10px "Manrope", sans-serif;
+  letter-spacing: 1.8px;
+  display: block;
+}
+
+.director-sign b {
+  display: block;
+  font: 700 16px "Manrope", sans-serif;
+  margin: 6px 0 4px;
+}
+
+.director-sign small {
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* VALUES */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.value-card {
+  position: relative;
+  padding: 44px 34px;
+  background: white;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(6, 23, 47, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 360px;
+  transition: all .35s cubic-bezier(.16, 1, .3, 1);
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(6, 23, 47, 0.1);
+  border-color: rgba(214, 173, 88, 0.4);
+}
+
+.value-card.featured {
+  background: linear-gradient(145deg, #ffffff, #faf7f0);
+  border-color: rgba(214, 173, 88, 0.35);
+}
+
+.value-index {
+  font: 800 12px "Manrope", sans-serif;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+.value-icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: rgba(6, 23, 47, 0.05);
+  color: var(--navy);
+  font-size: 22px;
+  margin: 28px 0 20px;
+  transition: all .3s ease;
+}
+
+.value-card:hover .value-icon {
+  background: var(--navy);
+  color: var(--gold2);
+  transform: scale(1.08);
+}
+
+.value-card h3 {
+  font: 700 24px "Manrope", sans-serif;
+  margin-bottom: 12px;
+  letter-spacing: -.5px;
+}
+
+.value-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.value-arrow {
+  align-self: flex-end;
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 13px;
+  transition: color .25s, transform .25s;
+}
+
+.value-card:hover .value-arrow {
+  color: var(--gold);
+  transform: translate(3px, -3px);
+}
+
+/* ==========================================================================
+   SCHOOL LIFE
+   ========================================================================== */
+.life-layout {
+  display: grid;
+  grid-template-columns: 1.3fr .85fr;
+  grid-template-rows: 270px 270px;
+  gap: 28px;
+}
+
+.life-large {
+  grid-row: 1 / 3;
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 20px 60px rgba(6, 23, 47, 0.12);
+}
+
+.life-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s cubic-bezier(.16, 1, .3, 1);
+}
+
+.life-large:hover img {
+  transform: scale(1.04);
+}
+
+.life-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 30%, rgba(6, 23, 47, 0.9));
+}
+
+.life-info {
+  position: absolute;
+  left: 36px;
+  bottom: 36px;
+  right: 36px;
+  color: white;
+}
+
+.life-info span {
+  color: var(--gold2);
+  font: 700 9px "Manrope", sans-serif;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.life-info h3 {
+  font: 700 clamp(22px, 2.2vw, 32px)/1.2 "Manrope", sans-serif;
+}
+
+.view-pill {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(6, 23, 47, 0.7);
+  backdrop-filter: blur(10px);
+  color: white;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform .3s ease;
+}
+
+.life-large:hover .view-pill {
+  transform: scale(1.1);
+  background: var(--navy);
+  color: var(--gold2);
+}
+
+.life-dark,
+.life-gold {
+  position: relative;
+  border-radius: 28px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all .35s ease;
+}
+
+.life-dark {
+  background: var(--navy);
+  color: white;
+  box-shadow: 0 15px 40px rgba(6, 23, 47, 0.15);
+}
+
+.life-gold {
+  background: linear-gradient(135deg, #d6ad58, #b88d37);
+  color: var(--navy);
+  box-shadow: 0 15px 40px rgba(214, 173, 88, 0.25);
+}
+
+.life-dark:hover,
+.life-gold:hover {
+  transform: translateY(-5px);
+}
+
+.card-number {
+  font: 800 13px "Manrope", sans-serif;
+  opacity: .6;
+}
+
+.tag.light {
+  color: var(--gold2);
+}
+
+.life-gold .tag {
+  color: var(--navy);
+  opacity: .75;
+}
+
+.life-dark h3 {
+  font: 700 clamp(20px, 1.8vw, 26px)/1.25 "Manrope", sans-serif;
+  margin-top: 10px;
+  letter-spacing: -.5px;
+}
+
+.life-gold h3 {
+  font: 700 clamp(20px, 1.8vw, 26px)/1.25 "Manrope", sans-serif;
+  margin-top: 10px;
+  letter-spacing: -.5px;
+  color: var(--navy);
+}
+
+.circle-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  align-self: flex-end;
+  font-size: 14px;
+  transition: transform .3s ease;
+}
+
+.life-dark .circle-arrow {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.life-gold .circle-arrow {
+  background: var(--navy);
+  color: var(--gold2);
+}
+
+.life-dark:hover .circle-arrow,
+.life-gold:hover .circle-arrow {
+  transform: translate(3px, -3px);
+}
+
+/* ==========================================================================
+   INSTAGRAM SHOWCASE
+   ========================================================================== */
+.insta-section {
+  background: linear-gradient(180deg, #06172f 0%, #030e1e 100%);
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tag.insta-tag {
+  color: #f1a368;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tag.insta-tag i {
+  font-size: 14px;
+}
+
+.insta-profile-card {
+  margin-bottom: 50px;
+  padding: 28px 36px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.insta-profile-left {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.insta-avatar-wrap {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  flex: 0 0 68px;
+}
+
+.insta-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #06172f;
+  position: relative;
+  z-index: 2;
+}
+
+.insta-story-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: var(--insta-grad);
+  z-index: 1;
+  animation: rotateRing 8s linear infinite;
+}
+
+@keyframes rotateRing {
+  to { transform: rotate(360deg); }
+}
+
+.insta-handle-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.insta-handle-row h3 {
+  font: 800 20px "Manrope", sans-serif;
+  letter-spacing: -.3px;
+  color: white;
+}
+
+.verified-badge {
+  color: #38bdf8;
+  font-size: 16px;
+}
+
+.insta-profile-name {
+  color: var(--gold2);
+  font: 700 9.5px "Manrope", sans-serif;
+  letter-spacing: 1.5px;
+  margin: 4px 0 8px;
+}
+
+.insta-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.insta-stats-row strong {
+  color: white;
+}
+
+.insta-stats-row small {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.dot-sep {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.insta-btn-gradient {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  border-radius: 100px;
+  background: var(--insta-grad);
+  color: white;
+  font: 700 12px "Manrope", sans-serif;
+  letter-spacing: .5px;
+  box-shadow: 0 10px 30px rgba(220, 39, 67, 0.35);
+  transition: all .35s cubic-bezier(.16, 1, .3, 1);
+  white-space: nowrap;
+}
+
+.insta-btn-gradient:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(220, 39, 67, 0.5);
+  color: #ffffff;
+}
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.insta-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(12px);
+  transition: all .35s cubic-bezier(.16, 1, .3, 1);
+}
+
+.insta-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  border-color: rgba(241, 212, 141, 0.35);
+}
+
+.insta-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  cursor: pointer;
+  background: #020914;
+}
+
+.insta-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s cubic-bezier(.16, 1, .3, 1);
+}
+
+.insta-card:hover .insta-card-media img {
+  transform: scale(1.08);
+}
+
+.insta-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 50%, rgba(2, 9, 20, 0.88));
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 18px;
+}
+
+.insta-card-badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--insta-grad);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.insta-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.insta-likes-pill {
+  padding: 5px 10px;
+  border-radius: 100px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  color: white;
+  font: 700 11px "Manrope", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.insta-likes-pill i {
+  color: #ff3b5c;
+  font-size: 11px;
+}
+
+.insta-preview-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  transition: all .2s;
+}
+
+.insta-preview-btn:hover {
+  background: white;
+  color: var(--navy);
+  transform: scale(1.1);
+}
+
+.insta-card-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.insta-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.insta-post-tag {
+  font: 700 9px "Manrope", sans-serif;
+  letter-spacing: 1.5px;
+  color: var(--gold2);
+  text-transform: uppercase;
+}
+
+.insta-post-link {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 16px;
+  transition: all .25s;
+}
+
+.insta-post-link:hover {
+  color: #f1a368;
+  transform: scale(1.15);
+}
+
+.insta-card-title {
+  font: 700 16px "Manrope", sans-serif;
+  color: white;
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.insta-card-caption {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.insta-inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold2);
+  font: 700 10.5px "Manrope", sans-serif;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.insta-inline-link:hover {
+  color: white;
+  gap: 12px;
+}
+
+.insta-section-footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.insta-large-cta {
+  padding: 16px 36px;
+  font-size: 12px;
+}
+
+/* ==========================================================================
+   ACHIEVEMENTS / STATS
+   ========================================================================== */
+.numbers-top {
+  margin-bottom: 60px;
+}
+
+.numbers-top h2 {
+  font: 800 clamp(36px, 4vw, 56px)/1.08 "Manrope", sans-serif;
+  letter-spacing: -2px;
+  margin: 14px 0 20px;
+}
+
+.numbers-top h2 em {
+  font-style: italic;
+  color: var(--gold2);
+  font-family: serif;
+}
+
+.numbers-top p {
+  max-width: 500px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.stat {
+  padding: 50px 28px;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stat:last-child {
+  border-right: 0;
+}
+
+.stat strong {
+  font: 800 clamp(44px, 5.5vw, 76px) "Manrope", sans-serif;
+  letter-spacing: -3px;
+  color: white;
+  line-height: 1;
+}
+
+.stat sup {
+  font-size: 32px;
+  color: var(--gold);
+  vertical-align: top;
+  margin-left: 2px;
+}
+
+.stat span {
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12.5px;
+  line-height: 1.5;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   GALLERY
+   ========================================================================== */
+.gallery-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 45px;
+}
+
+.filter-btn {
+  padding: 10px 22px;
+  border-radius: 100px;
+  border: 1px solid var(--line);
+  background: white;
+  color: var(--text);
+  font: 700 11px "Manrope", sans-serif;
+  letter-spacing: .5px;
+  transition: all .25s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--gold);
+  color: var(--navy);
+}
+
+.filter-btn.active {
+  background: var(--navy);
+  color: var(--gold2);
+  border-color: var(--navy);
+  box-shadow: 0 8px 22px rgba(6, 23, 47, 0.2);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 280px;
+  gap: 24px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #020914;
+  box-shadow: 0 10px 30px rgba(6, 23, 47, 0.08);
+}
+
+.gallery-big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .8s cubic-bezier(.16, 1, .3, 1);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-item-hover {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 23, 47, 0.6);
+  backdrop-filter: blur(4px);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.gallery-item-hover i {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  color: var(--navy);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  transform: scale(.8);
+  transition: transform .3s ease;
+}
+
+.gallery-item:hover .gallery-item-hover {
+  opacity: 1;
+}
+
+.gallery-item:hover .gallery-item-hover i {
+  transform: scale(1);
+}
+
+.gallery-insta-pill {
+  padding: 8px 16px;
+  border-radius: 100px;
+  background: var(--insta-grad);
+  color: white;
+  font: 700 11px "Manrope", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 24px rgba(220, 39, 67, 0.4);
+}
+
+/* ==========================================================================
+   MANIFESTO & CONTACTS
+   ========================================================================== */
+.manifesto {
+  padding: 130px 0;
+  background: linear-gradient(135deg, #040e1e, #091e3b, #040e1e);
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-symbol {
+  font: 800 110px/1 "Manrope", serif;
+  color: rgba(214, 173, 88, 0.25);
+  display: block;
+  margin-bottom: -30px;
+}
+
+.manifesto-inner h2 {
+  font: 800 clamp(36px, 5.2vw, 72px)/1.05 "Manrope", sans-serif;
+  letter-spacing: -2px;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.manifesto-inner h2 em {
+  font-style: italic;
+  color: var(--gold2);
+  font-family: serif;
+}
+
+.manifesto-line {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 30px auto;
+}
+
+.manifesto-inner p {
+  color: rgba(255, 255, 255, 0.6);
+  font: 700 11px "Manrope", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.contact-box {
+  background: var(--navy);
+  color: white;
+  border-radius: 32px;
+  padding: 70px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  box-shadow: 0 35px 90px rgba(6, 23, 47, 0.2);
+}
+
+.contact-title h2 {
+  font: 800 clamp(36px, 4.5vw, 60px)/1.08 "Manrope", sans-serif;
+  letter-spacing: -2px;
+  margin-top: 14px;
+}
+
+.contact-title h2 em {
+  font-style: italic;
+  color: var(--gold2);
+  font-family: serif;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contact-insta-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 24px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(225, 48, 108, 0.15), rgba(131, 58, 180, 0.15));
+  border: 1px solid rgba(225, 48, 108, 0.35);
+  transition: all .35s cubic-bezier(.16, 1, .3, 1);
+}
+
+.contact-insta-card:hover {
+  background: linear-gradient(135deg, rgba(225, 48, 108, 0.3), rgba(131, 58, 180, 0.3));
+  border-color: rgba(225, 48, 108, 0.7);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(220, 39, 67, 0.25);
+}
+
+.contact-insta-icon {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  border-radius: 14px;
+  background: var(--insta-grad);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  box-shadow: 0 8px 20px rgba(220, 39, 67, 0.35);
+}
+
+.contact-insta-details span {
+  font: 700 9px "Manrope", sans-serif;
+  letter-spacing: 1.8px;
+  color: #f1a368;
+  text-transform: uppercase;
+  display: block;
+}
+
+.contact-insta-details strong {
+  font: 700 18px "Manrope", sans-serif;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0 2px;
+}
+
+.contact-insta-details strong b {
+  font-size: 13px;
+  color: var(--gold2);
+}
+
+.contact-insta-details small {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  display: block;
+}
+
+.contact-items > div {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 18px;
+}
+
+.contact-items > div span {
+  font: 700 9px "Manrope", sans-serif;
+  letter-spacing: 2px;
+  color: var(--gold2);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.contact-items > div strong {
+  font: 600 16px "Manrope", sans-serif;
+  color: white;
+  display: block;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+  padding: 40px 0;
+  background: #030c18;
+  color: rgba(255, 255, 255, 0.55);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font: 700 11px "Manrope", sans-serif;
+}
+
+.footer-social-link i {
+  font-size: 16px;
+  color: #f1a368;
+}
+
+.footer-social-link:hover {
+  color: #ffffff;
+}
+
+.footer-content > span {
+  font-size: 12px;
+}
+
+/* ==========================================================================
+   FLOATING INSTAGRAM PILL
+   ========================================================================== */
+.floating-insta {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--insta-grad);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  box-shadow: 0 10px 30px rgba(220, 39, 67, 0.45);
+  z-index: 999;
+  transition: all .35s cubic-bezier(.16, 1, .3, 1);
+}
+
+.floating-insta:hover {
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 18px 45px rgba(220, 39, 67, 0.6);
+  color: white;
+}
+
+.floating-insta-glow {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: var(--insta-grad);
+  opacity: .35;
+  z-index: -1;
+  animation: floatingPulse 2.5s infinite;
+}
+
+@keyframes floatingPulse {
+  0%, 100% { transform: scale(1); opacity: .35; }
+  50% { transform: scale(1.25); opacity: 0; }
+}
+
+.floating-insta-tooltip {
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  background: var(--navy);
+  color: white;
+  padding: 7px 14px;
+  border-radius: 100px;
+  font: 700 11px "Manrope", sans-serif;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.floating-insta:hover .floating-insta-tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* ==========================================================================
+   MOBILE BOTTOM DOCK (iOS Style Bottom Navigation)
+   ========================================================================== */
+.mobile-bottom-dock {
+  display: none;
+  position: fixed;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  z-index: 998;
+  padding: 0 14px;
+  pointer-events: none;
+}
+
+.dock-inner {
+  pointer-events: auto;
+  max-width: 440px;
+  margin: 0 auto;
+  background: rgba(6, 23, 47, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 100px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.dock-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 10px;
+  color: rgba(255, 255, 255, 0.55);
+  font: 700 9px "Manrope", sans-serif;
+  letter-spacing: .3px;
+  transition: all .25s ease;
+  position: relative;
+}
+
+.dock-icon {
+  font-size: 15px;
+  transition: transform .25s ease, color .25s ease;
+}
+
+.dock-item:active {
+  transform: scale(.92);
+}
+
+.dock-item.active {
+  color: var(--gold2);
+}
+
+.dock-item.active .dock-icon {
+  transform: translateY(-2px);
+  color: var(--gold2);
+}
+
+.dock-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 14px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gold2);
+  box-shadow: 0 0 8px var(--gold2);
+}
+
+.dock-item-insta .dock-icon.insta-badge {
+  background: var(--insta-grad);
+  color: white;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  box-shadow: 0 3px 10px rgba(220, 39, 67, 0.4);
+}
+
+.dock-item-insta {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ==========================================================================
+   STORY VIEWER MODAL (FULLSCREEN INSTAGRAM STORY)
+   ========================================================================== */
+.story-viewer-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+
+.story-viewer-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.story-viewer-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 14, 0.94);
+  backdrop-filter: blur(20px);
+}
+
+.story-viewer-container {
+  position: relative;
+  z-index: 2;
+  width: min(440px, 100vw);
+  height: min(820px, 94vh);
+  background: #020914;
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.story-progress-bar {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  right: 14px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.story-progress-fill {
+  height: 100%;
+  background: white;
+  width: 0%;
+  transition: width .04s linear;
+}
+
+.story-viewer-header {
+  position: absolute;
+  top: 24px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.story-author-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.story-author-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  object-fit: cover;
+}
+
+.story-author-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.story-author-name {
+  font: 700 13px "Manrope", sans-serif;
+  color: white;
+}
+
+.verified-icon {
+  color: #38bdf8;
+  font-size: 13px;
+}
+
+.story-time-ago {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  display: block;
+}
+
+.story-close-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+  border: 0;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  transition: transform .2s ease;
+}
+
+.story-close-btn:hover {
+  transform: scale(1.1);
+  background: white;
+  color: var(--navy);
+}
+
+.story-media-wrapper {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  background: #000;
+}
+
+.story-media-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-media-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 25%, transparent 60%, rgba(2, 6, 14, 0.95) 100%);
+}
+
+.story-viewer-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 20px 22px;
+  z-index: 10;
+}
+
+.story-footer-title {
+  font: 700 17px "Manrope", sans-serif;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.story-footer-desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+.story-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 100px;
+  background: var(--insta-grad);
+  color: white;
+  font: 700 12px "Manrope", sans-serif;
+  box-shadow: 0 8px 24px rgba(220, 39, 67, 0.4);
+  transition: all .25s ease;
+}
+
+.story-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(220, 39, 67, 0.6);
+  color: white;
+}
+
+/* ==========================================================================
+   LIGHTBOX MODAL
+   ========================================================================== */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+
+.lightbox-modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 11, 22, 0.88);
+  backdrop-filter: blur(18px);
+}
+
+.lightbox-box {
+  position: relative;
+  z-index: 2;
+  max-width: min(920px, calc(100% - 36px));
+  max-height: 90vh;
+  background: #06172f;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.7);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  color: white;
+  font-size: 26px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all .25s;
+}
+
+.lightbox-close:hover {
+  background: white;
+  color: var(--navy);
+  transform: scale(1.1);
+}
+
+.lightbox-image-container {
+  max-height: 65vh;
+  overflow: hidden;
+  background: #020813;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image-container img {
+  max-height: 65vh;
+  width: auto;
+  object-fit: contain;
+}
+
+.lightbox-footer {
+  padding: 20px 28px;
+  background: #06172f;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.lightbox-caption {
+  color: white;
+  font-size: 14px;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.lightbox-insta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: var(--insta-grad);
+  color: white;
+  font: 700 11px "Manrope", sans-serif;
+  letter-spacing: .5px;
+  box-shadow: 0 6px 18px rgba(220, 39, 67, 0.35);
+  white-space: nowrap;
+}
+
+.lightbox-insta-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(220, 39, 67, 0.5);
+  color: white;
+}
+
+/* ==========================================================================
+   REVEAL ON SCROLL
+   ========================================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .8s cubic-bezier(.16, 1, .3, 1), transform .8s cubic-bezier(.16, 1, .3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay {
+  transition-delay: .18s;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (TABLET 950PX)
+   ========================================================================== */
+@media (max-width: 950px) {
+  .container {
+    width: min(100% - 34px, 720px);
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(340px, 86%);
+    height: 100vh;
+    padding: 100px 30px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    background: var(--navy);
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.45);
+    transition: right .45s cubic-bezier(.16, 1, .3, 1);
+    z-index: 1001;
+    overflow-y: auto;
+  }
+
+  .nav-menu.open {
+    right: 0;
+  }
+
+  .nav-menu a {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .nav-mobile-actions {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 20px;
+  }
+
+  .nav-mobile-actions .nav-insta-pill {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .menu-btn {
+    display: block;
+    position: relative;
+    z-index: 1002;
+  }
+
+  body.menu-open .menu-btn span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  body.menu-open .menu-btn span:nth-child(2) {
+    opacity: 0;
+  }
+
+  body.menu-open .menu-btn span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .hero-content,
+  .director-grid,
+  .contact-box {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    gap: 50px;
+  }
+
+  .hero-image-wrap {
+    max-width: 520px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .section-intro {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  .section-intro > p {
+    margin-top: 20px;
+  }
+
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .about-side {
+    grid-column: 2;
+    padding: 24px 0 16px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .value-card {
+    min-height: auto;
+  }
+
+  .life-layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 380px auto;
+  }
+
+  .life-large {
+    grid-column: 1 / -1;
+  }
+
+  .insta-profile-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+
+  .insta-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat:nth-child(2) {
+    border-right: 0;
+  }
+
+  .stat:nth-child(3),
+  .stat:nth-child(4) {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-big {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ==========================================================================
+   EXCLUSIVE SMARTPHONE / MOBILE OPTIMIZATION (<= 500PX)
+   ========================================================================== */
+@media (max-width: 500px) {
+  body {
+    padding-bottom: 84px; /* Space for iOS Bottom Dock */
+  }
+
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .section,
+  .section-dark {
+    padding: 70px 0;
+  }
+
+  .nav {
+    height: 68px;
+  }
+
+  .header-actions .nav-insta-pill {
+    display: none;
+  }
+
+  .logo-circle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .logo-title b {
+    font-size: 11px;
+  }
+
+  .logo-title small {
+    font-size: 7px;
+    letter-spacing: 1.2px;
+  }
+
+  .language-switcher {
+    padding: 3px 6px;
+  }
+
+  .lang-btn {
+    padding: 3px 6px;
+    font-size: 9px;
+  }
+
+  /* Hero Section for Mobile */
+  .hero-content {
+    padding: 95px 0 45px;
+    gap: 30px;
+  }
+
+  .hero-admission-badge {
+    padding: 5px 12px;
+    font-size: 8.5px;
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+    letter-spacing: -1.2px;
+    margin: 14px 0 16px;
+  }
+
+  .hero-desc {
+    font-size: 13.5px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .hero-buttons .button {
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  .hero-bottom {
+    margin-top: 32px;
+    gap: 10px;
+    font-size: 8px;
+  }
+
+  .hero-image {
+    height: 340px;
+    border-radius: 160px 160px 20px 20px;
+  }
+
+  .hero-photo-caption strong {
+    font-size: 16px;
+  }
+
+  .hero-card {
+    left: 8px;
+    right: 8px;
+    bottom: 12px;
+    max-width: none;
+    padding: 12px 14px;
+    border-radius: 16px;
+  }
+
+  .hero-card .star {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    font-size: 15px;
+  }
+
+  .hero-card strong {
+    font-size: 11px;
+  }
+
+  .scroll-down {
+    display: none;
+  }
+
+  /* Stories Tray on Mobile */
+  .stories-bar-section {
+    padding: 22px 0 24px;
+  }
+
+  .stories-header h4 {
+    font-size: 11px;
+  }
+
+  .stories-subtitle {
+    display: none;
+  }
+
+  .story-ring-wrap {
+    width: 66px;
+    height: 66px;
+  }
+
+  .story-avatar-inner {
+    width: 58px;
+    height: 58px;
+  }
+
+  .story-tag-name {
+    font-size: 10px;
+    max-width: 70px;
+  }
+
+  /* Bento Grid on Mobile */
+  .bento-stats-section {
+    padding: 40px 0 60px;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .bento-card {
+    padding: 22px 20px;
+    min-height: auto;
+  }
+
+  .bento-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .bento-content h3 {
+    font-size: 20px;
+  }
+
+  .bento-content p {
+    font-size: 12.5px;
+  }
+
+  /* Sections Headings */
+  .section-intro {
+    margin-bottom: 35px;
+  }
+
+  .section-intro h2 {
+    font-size: 32px;
+    letter-spacing: -1.2px;
+  }
+
+  .section-intro > p {
+    font-size: 13px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    padding-top: 30px;
+  }
+
+  .about-number {
+    display: none;
+  }
+
+  .about-main {
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .about-main h3 {
+    font-size: 24px;
+  }
+
+  .about-side {
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    padding-top: 24px;
+  }
+
+  .about-photo {
+    height: 250px;
+    margin-top: 35px;
+    border-radius: 20px;
+  }
+
+  /* Director */
+  .director-photo {
+    height: 360px;
+    border-radius: 20px;
+  }
+
+  .director-text h2 {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .director-text > p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* Values */
+  .value-card {
+    padding: 30px 24px;
+    border-radius: 20px;
+  }
+
+  .value-icon {
+    margin: 20px 0 16px;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .value-card h3 {
+    font-size: 20px;
+  }
+
+  /* Life */
+  .life-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+  }
+
+  .life-large {
+    height: 320px;
+    border-radius: 20px;
+  }
+
+  .life-info {
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .life-info h3 {
+    font-size: 20px;
+  }
+
+  .life-dark,
+  .life-gold {
+    padding: 28px 22px;
+    border-radius: 20px;
+  }
+
+  /* Instagram Showcase on Mobile */
+  .insta-profile-card {
+    padding: 20px 18px;
+    border-radius: 20px;
+    gap: 20px;
+  }
+
+  .insta-profile-left {
+    gap: 15px;
+  }
+
+  .insta-avatar-wrap {
+    width: 54px;
+    height: 54px;
+    flex: 0 0 54px;
+  }
+
+  .insta-handle-row h3 {
+    font-size: 16px;
+  }
+
+  .insta-stats-row {
+    font-size: 11.5px;
+  }
+
+  .insta-btn-gradient {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 11px;
+  }
+
+  .insta-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .insta-card {
+    border-radius: 20px;
+  }
+
+  .insta-card-body {
+    padding: 18px;
+  }
+
+  .insta-card-title {
+    font-size: 15px;
+  }
+
+  /* Stats */
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 28px 14px;
+  }
+
+  .stat:last-child {
+    border-bottom: 0;
+  }
+
+  .stat strong {
+    font-size: 52px;
+  }
+
+  /* Gallery Filters & Grid */
+  .gallery-filters {
+    gap: 6px;
+    margin-bottom: 25px;
+  }
+
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 10px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 150px;
+    gap: 12px;
+  }
+
+  .gallery-big {
+    grid-column: 1 / -1;
+    grid-row: span 2;
+    height: 240px;
+  }
+
+  .gallery-item {
+    border-radius: 16px;
+  }
+
+  /* Manifesto */
+  .manifesto {
+    padding: 80px 0;
+  }
+
+  .quote-symbol {
+    font-size: 70px;
+  }
+
+  .manifesto-inner h2 {
+    font-size: 30px;
+  }
+
+  /* Contact */
+  .contact-box {
+    padding: 34px 20px;
+    gap: 30px;
+    border-radius: 22px;
+  }
+
+  .contact-title h2 {
+    font-size: 32px;
+  }
+
+  .contact-insta-card {
+    padding: 16px 16px;
+    gap: 14px;
+  }
+
+  .contact-insta-icon {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    font-size: 20px;
+  }
+
+  .contact-insta-details strong {
+    font-size: 15px;
+  }
+
+  /* Floating Instagram Pill - hide or adjust position above dock */
+  .floating-insta {
+    display: none; /* Mobile Bottom Dock handles direct Instagram access! */
+  }
+
+  /* Show iOS Bottom Dock */
+  .mobile-bottom-dock {
+    display: block;
+  }
+
+  .story-viewer-container {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+
+
+/* ==========================================================================
+   THEME SWITCHER CONTROLS & STYLES (DARK & LIGHT)
+   ========================================================================== */
+body,
+.header,
+.hero,
+.stories-bar-section,
+.bento-stats-section,
+.bento-card,
+.about,
+.director,
+.values,
+.value-card,
+.life,
+.gallery,
+.footer,
+.mobile-bottom-dock,
+.language-switcher,
+.theme-toggle-btn {
+  transition: background 0.35s ease, background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.theme-toggle-btn {
+  position: relative;
+  width: 42px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  cursor: pointer;
+  outline: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold2);
+  background: rgba(214, 173, 88, 0.15);
+  box-shadow: 0 4px 18px rgba(214, 173, 88, 0.3);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.92);
+}
+
+.theme-icon-track {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+}
+
+.theme-icon {
+  position: absolute;
+  font-size: 15px;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Default Dark mode icon display (shows Sun in gold to toggle to Light) */
+.theme-icon.sun {
+  color: var(--gold2);
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+  filter: drop-shadow(0 0 6px rgba(243, 217, 147, 0.6));
+}
+
+.theme-icon.moon {
+  color: #60a5fa;
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.3);
+}
+
+/* Light mode icon display (shows Moon in deep navy to toggle to Dark) */
+[data-theme="light"] .theme-icon.sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.3);
+}
+
+[data-theme="light"] .theme-icon.moon {
+  color: #0b2343;
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+  filter: drop-shadow(0 0 4px rgba(11, 35, 67, 0.3));
+}
+
+[data-theme="light"] .theme-toggle-btn {
+  border-color: rgba(15, 23, 42, 0.15);
+  background: rgba(15, 23, 42, 0.05);
+  color: #0b2343;
+}
+
+[data-theme="light"] .theme-toggle-btn:hover {
+  border-color: #0b2343;
+  background: rgba(11, 35, 67, 0.08);
+  box-shadow: 0 4px 18px rgba(11, 35, 67, 0.15);
+}
+
+/* Mobile Drawer Theme Row */
+.nav-mobile-theme-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 12px;
+}
+
+[data-theme="light"] .nav-mobile-theme-row {
+  background: rgba(15, 23, 42, 0.03);
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+.nav-mobile-theme-title {
+  font: 700 12px "Manrope", sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+[data-theme="light"] .nav-mobile-theme-title {
+  color: #475569;
+}
+
+.mobile-theme-toggle-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  color: inherit;
+}
+
+.mobile-theme-pill-track {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7px;
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .mobile-theme-pill-track {
+  background: rgba(15, 23, 42, 0.08);
+  border-color: rgba(15, 23, 42, 0.15);
+}
+
+.mobile-theme-icon {
+  font-size: 11px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mobile-theme-icon.moon {
+  color: #60a5fa;
+}
+
+.mobile-theme-icon.sun {
+  color: var(--gold2);
+}
+
+.mobile-theme-thumb {
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--gold2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+}
+
+[data-theme="light"] .mobile-theme-thumb {
+  transform: translateX(24px);
+  background: #0b2343;
+}
+
+.theme-status-text {
+  font: 700 12px "Manrope", sans-serif;
+  color: var(--gold2);
+}
+
+[data-theme="light"] .theme-status-text {
+  color: #0b2343;
+}
+
+/* ==========================================================================
+   THEME: DARK (DEEP LUXURY SPACE NAVY)
+   ========================================================================== */
+[data-theme="dark"] body {
+  background: #030814;
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .bento-stats-section {
+  background: #030814;
+}
+
+[data-theme="dark"] .bento-card {
+  background: rgba(10, 26, 50, 0.7);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+[data-theme="dark"] .bento-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 18px 45px rgba(214, 173, 88, 0.18);
+}
+
+[data-theme="dark"] .bento-content h3 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .bento-content p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .about {
+  background: #030814;
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .about-number {
+  color: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .about-grid {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .about-main {
+  border-right-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .about-main h3 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .about-main p,
+[data-theme="dark"] .about-side p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .values {
+  background: #061122;
+}
+
+[data-theme="dark"] .value-card {
+  background: rgba(10, 26, 50, 0.7);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+[data-theme="dark"] .value-card h3 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .value-card p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .value-index {
+  color: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .value-arrow {
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--gold2);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .life {
+  background: #030814;
+}
+
+[data-theme="dark"] .gallery {
+  background: #061122;
+}
+
+[data-theme="dark"] .filter-btn {
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .filter-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .filter-btn.active {
+  background: linear-gradient(135deg, rgba(214, 173, 88, 0.35), rgba(241, 212, 141, 0.18));
+  color: var(--gold2);
+  border-color: rgba(214, 173, 88, 0.5);
+  box-shadow: 0 4px 15px rgba(214, 173, 88, 0.25);
+}
+
+[data-theme="dark"] .gallery-item {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .mobile-bottom-dock {
+  background: rgba(6, 23, 47, 0.88);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .dock-item {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+[data-theme="dark"] .dock-item.active {
+  color: var(--gold2);
+}
+
+/* ==========================================================================
+   THEME: LIGHT (PRISTINE ACADEMY SLATE & IVORY)
+   ========================================================================== */
+[data-theme="light"] body {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* Header in Light Mode */
+[data-theme="light"] .header {
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  color: #06172f;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+[data-theme="light"] .header.scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom-color: rgba(214, 173, 88, 0.35);
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
+}
+
+[data-theme="light"] .logo-title b {
+  color: #06172f;
+}
+
+[data-theme="light"] .logo-title small {
+  color: #64748b;
+}
+
+[data-theme="light"] .logo-circle {
+  background: #ffffff;
+  border-color: var(--gold);
+}
+
+[data-theme="light"] .nav-menu a {
+  color: #334155;
+}
+
+[data-theme="light"] .nav-menu a:hover {
+  color: #06172f;
+}
+
+[data-theme="light"] .nav-insta-pill {
+  background: rgba(15, 23, 42, 0.05);
+  border-color: rgba(15, 23, 42, 0.12);
+  color: #06172f;
+}
+
+[data-theme="light"] .nav-insta-pill:hover {
+  background: var(--insta-grad);
+  color: #ffffff;
+}
+
+[data-theme="light"] .language-switcher {
+  background: rgba(15, 23, 42, 0.04);
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+[data-theme="light"] .lang-btn {
+  color: #64748b;
+}
+
+[data-theme="light"] .lang-btn:hover {
+  color: #06172f;
+}
+
+[data-theme="light"] .lang-btn.active {
+  background: rgba(214, 173, 88, 0.22);
+  color: #8c5d08;
+  border-color: rgba(214, 173, 88, 0.6);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .lang-divider {
+  color: rgba(15, 23, 42, 0.18);
+}
+
+[data-theme="light"] .menu-btn span {
+  background: #06172f;
+}
+
+/* Hero Section in Light Mode */
+[data-theme="light"] .hero {
+  color: #0f172a;
+  background:
+    radial-gradient(circle at 75% 35%, rgba(214, 173, 88, 0.14), transparent 45%),
+    radial-gradient(circle at 18% 75%, rgba(59, 130, 246, 0.09), transparent 40%),
+    linear-gradient(135deg, #f8fafc, #ffffff 45%, #eef2f6 85%, #f1f5f9);
+}
+
+[data-theme="light"] .hero-lines {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  opacity: 0.75;
+}
+
+[data-theme="light"] .orb {
+  border-color: rgba(214, 173, 88, 0.2);
+}
+
+[data-theme="light"] .hero-admission-badge {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.35);
+  color: #059669;
+}
+
+[data-theme="light"] .hero h1 {
+  color: #06172f;
+}
+
+[data-theme="light"] .hero h1 span {
+  -webkit-text-stroke: 1.2px #06172f;
+  color: transparent;
+}
+
+[data-theme="light"] .hero-desc {
+  color: #475569;
+}
+
+[data-theme="light"] .button.primary {
+  background: #06172f;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(6, 23, 47, 0.2);
+}
+
+[data-theme="light"] .button.primary:hover {
+  background: #0b2343;
+  color: #ffffff;
+  box-shadow: 0 18px 40px rgba(6, 23, 47, 0.28);
+}
+
+[data-theme="light"] .button.secondary {
+  border: 1px solid rgba(15, 23, 42, 0.2);
+  color: #0f172a;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+}
+
+[data-theme="light"] .button.secondary:hover {
+  background: #f1f5f9;
+  border-color: rgba(15, 23, 42, 0.35);
+}
+
+[data-theme="light"] .hero-bottom {
+  color: #64748b;
+}
+
+[data-theme="light"] .hero-card {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(15, 23, 42, 0.1);
+  box-shadow: 0 20px 45px rgba(6, 23, 47, 0.08);
+  color: #0f172a;
+}
+
+[data-theme="light"] .hero-card strong {
+  color: #0f172a;
+}
+
+[data-theme="light"] .scroll-down {
+  color: #64748b;
+}
+
+/* Stories Bar in Light Mode */
+[data-theme="light"] .stories-bar-section {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .stories-subtitle {
+  color: #64748b;
+}
+
+[data-theme="light"] .story-avatar-inner {
+  border-color: #ffffff;
+  background: #f1f5f9;
+}
+
+[data-theme="light"] .story-tag-name {
+  color: #1e293b;
+}
+
+/* Bento Stats in Light Mode */
+[data-theme="light"] .bento-stats-section {
+  background: #f8fafc;
+}
+
+[data-theme="light"] .bento-card {
+  background: #ffffff;
+  border-color: rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 30px rgba(6, 23, 47, 0.04);
+}
+
+[data-theme="light"] .bento-content h3 {
+  color: #06172f;
+}
+
+[data-theme="light"] .bento-content p {
+  color: #64748b;
+}
+
+/* About Section in Light Mode */
+[data-theme="light"] .about {
+  background: #ffffff;
+}
+
+[data-theme="light"] .about-grid {
+  border-top-color: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .about-main {
+  border-right-color: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .about-number {
+  color: rgba(15, 23, 42, 0.12);
+}
+
+[data-theme="light"] .about-main h3 {
+  color: #06172f;
+}
+
+[data-theme="light"] .about-main p,
+[data-theme="light"] .about-side p {
+  color: #64748b;
+}
+
+/* Values in Light Mode */
+[data-theme="light"] .values {
+  background: #f8fafc;
+}
+
+[data-theme="light"] .value-card {
+  background: #ffffff;
+  border-color: rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 30px rgba(6, 23, 47, 0.04);
+  color: #0f172a;
+}
+
+[data-theme="light"] .value-card h3 {
+  color: #06172f;
+}
+
+[data-theme="light"] .value-card p {
+  color: #64748b;
+}
+
+[data-theme="light"] .value-index {
+  color: rgba(15, 23, 42, 0.1);
+}
+
+[data-theme="light"] .value-arrow {
+  border-color: rgba(15, 23, 42, 0.1);
+  color: #06172f;
+  background: rgba(15, 23, 42, 0.03);
+}
+
+/* School Life in Light Mode */
+[data-theme="light"] .life {
+  background: #ffffff;
+}
+
+/* Gallery in Light Mode */
+[data-theme="light"] .gallery {
+  background: #f8fafc;
+}
+
+[data-theme="light"] .filter-btn {
+  background: #ffffff;
+  border-color: rgba(15, 23, 42, 0.1);
+  color: #475569;
+}
+
+[data-theme="light"] .filter-btn:hover {
+  color: #06172f;
+  border-color: #06172f;
+}
+
+[data-theme="light"] .filter-btn.active {
+  background: #06172f;
+  color: #ffffff;
+  border-color: #06172f;
+  box-shadow: 0 6px 20px rgba(6, 23, 47, 0.2);
+}
+
+/* Mobile Bottom Dock in Light Mode */
+[data-theme="light"] .mobile-bottom-dock {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(15, 23, 42, 0.1);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .dock-item {
+  color: #64748b;
+}
+
+[data-theme="light"] .dock-item.active {
+  color: #06172f;
+}
+
+/* Mobile drawer in light mode */
+@media (max-width: 900px) {
+  [data-theme="light"] .nav-menu {
+    background: rgba(255, 255, 255, 0.98);
+    border-left: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: -10px 0 35px rgba(0, 0, 0, 0.08);
+  }
+}
